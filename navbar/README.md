@@ -1,1 +1,1 @@
-(Deployed here:)[google.com] 
+[Deployed here](google.com) 
