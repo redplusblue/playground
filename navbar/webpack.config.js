@@ -13,7 +13,7 @@ module.exports = {
   // HTML webpack plugin generates html file with script tag
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      title: 'Navigation Bar',
     }),
   ],
   output: {
