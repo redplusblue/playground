@@ -1,1 +1,1 @@
-[Deployed here](google.com) 
+Simple navbar with buttons. Code in ./dist
