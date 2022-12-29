@@ -1,0 +1,92 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.error {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#form > input {
+    border-radius: 5px;
+    height: 45px;
+    color: #282828;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 0 6px;
+    padding-left: 12px;
+}
+
+#form > input:focus {
+    outline: none;
+}
+
+.invalid {
+    border: 3px solid red;
+    background-color: #ffcccc;
+}
+
+.valid {
+    border: 3px solid green;
+    background-color: #ccffcc;
+}
+
+#form > input[type="submit"] {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding: 14px 24px 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 200ms,background 200ms;
+}
+
+#form > input[type="submit"]:hover {
+    background: #5551ff;
+    transform: scale(1.05);
+}
+
+#form > input[type="submit"]:active {
+    background: #5551ff;
+    transform: scale(0.95);
+}
+
+#form > input[type="submit"]:disabled {
+    background: #5551ff;
+    transform: scale(1);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
