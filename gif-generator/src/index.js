@@ -40,6 +40,14 @@ function generateGif(phrase) {
   
 }
 
+// Generate Gif but using async/await
+async function generateGifAsync(phrase) {
+  const img = document.querySelector('img');
+  const response = await fetch('https://api.giphy.com/v1/gifs/translate?api_key=' + API_KEY + '&s=' + phrase, {mode: 'cors'});
+  const data = await response.json();
+  img.src = data.data.images.original.url;
+}
+
 function search(){
   let searchDiv = document.createElement("div");
   searchDiv.id = "searchDiv";
