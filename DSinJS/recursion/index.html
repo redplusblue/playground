@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #content-wrapper{
+        background-color: #eee;
+        width: max-content;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      code {
+        font-weight: 600;
+        font-size: 1rem;
+        white-space: pre-wrap;
+        background-color: #eee;      
+        }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <div id="content-wrapper">
+        <code id="content"></code>
+    </div> 
+  </body>
+  <script src="recursion.js"></script>
+  <script defer>
+    // Print out the contents of recursion.js
+    async function printRecursion() {
+        const fileName = "recursion.js";
+        document.querySelector("h1").innerText = fileName;
+        const response = await fetch(fileName);
+        const text = await response.text();
+        document.getElementById("content").innerText = text;
+    }
+    document.addEventListener("DOMContentLoaded", printRecursion);
+  </script>
+</html>
