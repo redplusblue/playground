@@ -1,5 +1,4 @@
-## Recursion problems
+## TheOdinProject: Recursion Exercises
 
-## index.html loads the code from the .js file into the browser, very elegant waste of time
-
-<img src="files/preview.png" title="no point of this" />
+1. Assignment #1: [Fibonacci.js](./Fibonacci.js)
+2. Assignment #2: [Merge Sort](./MergeSort.js)
