@@ -4,3 +4,4 @@
 
 1. Recursion
 2. Linked Lists
+3. Binary Search Tree (BST)
