@@ -1,4 +1,3 @@
-const { default: expect } = require("expect");
 const analyseArray = require("./analyseArray");
 
 it("Function exists", () => {

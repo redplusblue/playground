@@ -1,4 +1,3 @@
-const { default: expect } = require("expect");
 const calculator = require("./calculator");
 
 it("Object Exists", () => {
