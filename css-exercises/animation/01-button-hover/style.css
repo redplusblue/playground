@@ -1,0 +1,43 @@
+#transition-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  font-size: 18px;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+/*
+My Solution
+
+button:hover {
+  transition-property: font-size;
+  transition-duration: 0.5s;
+  font-size: 24px;
+} */
+
+/* TOP Solution */
+
+button {
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+/* Why TOP Solution is better than My Solution? 
+- More concise
+- An abrupt change in font-size is not a good user experience 
+*/
