@@ -6,7 +6,8 @@ import PropTypes from 'prop-types'
 function NumberList(props) {
   const numbers = props.numbers
   const listItems = numbers.map((number) => {
-    return number % 2 == 0 ? <li key={number.toString()}>{number}</li> : null
+    // Can use ternary if statement or && operator
+    return number % 2 == 0 && <li key={number.toString()}>{number}</li>
   })
   return <ul>{listItems}</ul>
 }
