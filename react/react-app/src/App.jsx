@@ -2,10 +2,14 @@ import './App.css'
 // import { Greeting } from './greeting'
 
 function App() {
+  const numbers = [...Array(20).keys()]
+  const listItems = numbers.map((number) => <li>{number}</li>)
   return (
-    <>
-    <h1>Test</h1>
-    </>
+    // Multiple elements
+    <div>
+      <h1>Numbers!</h1>
+      <ul>{listItems}</ul>
+    </div>
   )
 }
 
