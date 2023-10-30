@@ -1,6 +1,5 @@
 import './App.css'
 import PropTypes from 'prop-types'
-import React from 'react'
 // import { Greeting } from './greeting'
 
 function List(props) {
@@ -26,12 +25,12 @@ List.propTypes = {
 
 
 function App() {
-  const numbers = [...Array(200).keys()]
+  const numbers = []
   return (
     // Multiple elements
     <div>
       <h1>Numbers!</h1>
-      <List />
+      <List numbers={numbers} />
     </div>
   )
 }
