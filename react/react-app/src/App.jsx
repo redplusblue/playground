@@ -26,19 +26,12 @@ List.propTypes = {
 
 
 function App() {
-  // const numbers = [...Array(200).keys()]
-  const [numbers, setNumbers] = React.useState(null);
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      setNumbers([...Array(200).keys()]);
-    }, 3000);
-  }, []);
+  const numbers = [...Array(200).keys()]
   return (
     // Multiple elements
     <div>
       <h1>Numbers!</h1>
-      <List numbers={numbers} />
+      <List />
     </div>
   )
 }
