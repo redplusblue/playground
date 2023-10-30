@@ -2,26 +2,21 @@ import './App.css'
 import PropTypes from 'prop-types'
 // import { Greeting } from './greeting'
 
-function ListItem(props) {
-  return <li>{props.value}</li>
-}
-ListItem.propTypes = {
-  value: PropTypes.number,
-}
-
+// Even Numbers only
 function NumberList(props) {
   const numbers = props.numbers
-  const listItems = numbers.map((number) => (
-    <ListItem key={number.toString()} value={number} />
-  ))
+  const listItems = numbers.map((number) => {
+    return number % 2 == 0 ? <li key={number.toString()}>{number}</li> : null
+  })
   return <ul>{listItems}</ul>
 }
 NumberList.propTypes = {
   numbers: PropTypes.arrayOf(PropTypes.number),
 }
 
+
 function App() {
-  const numbers = [...Array(20).keys()]
+  const numbers = [...Array(200).keys()]
   return (
     // Multiple elements
     <div>
