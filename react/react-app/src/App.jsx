@@ -1,36 +1,61 @@
 import './App.css'
-import PropTypes from 'prop-types'
+import { useState } from 'react';
 // import { Greeting } from './greeting'
 
-function List(props) {
-  // Ternary only
-  return ( <>
-  {!props.numbers ? (<div>Loading..</div>)
-  : props.numbers.length > 0 ?  (
-    <ul>
-      {props.numbers.map((number, index) => (
-        <li key={index}>{number}</li>
-      ))}
-    </ul>
-  ) : (
-    <div>No numbers provided</div>
-  )}
-  </> )
-}
-List.propTypes = {
-  numbers: PropTypes.arrayOf(PropTypes.number),
-}
-
-
-function App() {
-  const numbers = [...Array(12).keys()]
+// eslint-disable-next-line no-unused-vars
+function Input({label, onChange}) {
   return (
-    // Multiple elements
     <div>
-      <h1>Numbers!</h1>
-      <List numbers={numbers} />
+      <label>{label}</label>
+      {" "}
+      <input type="text" onChange={onChange} />
     </div>
   )
+}
+// eslint-disable-next-line no-unused-vars 
+function Person() {
+   const [person, setPerson] = useState({ fname: '', lname: '',age: 10 });
+
+   const handleIncreaseAge = () =>{
+      setPerson({ ...person, age: person.age + 1 });
+      // we've called setPerson, surely person has updated?
+   }
+
+   const handleChangedFName = (event) => {
+      setPerson({ ...person, fname: event.target.value });
+   }
+
+    const handleChangedLName = (event) => {
+      setPerson({ ...person, lname: event.target.value });
+    }
+   return (
+      <>
+          <Input label="First Name" onChange={handleChangedFName} />
+          <Input label="Last Name" onChange={handleChangedLName} />
+         <h1>{person.fname + " " + person.lname}</h1>
+         <h2>{person.age}</h2>
+         <button onClick={handleIncreaseAge}>Increase age</button>
+      </>
+   )
+} 
+
+// eslint-disable-next-line no-unused-vars
+function CustomInput() {
+   const [value, setValue] = useState('');
+   
+   return (
+      <input
+         type="text"
+         value={value}
+         onChange={(event) => setValue(event.target.value)}
+      />
+   );
+}
+
+function App() {
+    return (
+          <Person />
+    )
 }
 
 export default App
