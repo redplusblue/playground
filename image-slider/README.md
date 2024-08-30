@@ -1,1 +1,0 @@
-Simple image slider, code in ./src, compiled in ./dist
